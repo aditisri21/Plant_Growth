@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import bgImage from "../assets/growth.jpg";
 import { useRef } from "react";
 import leafVideo from "../assets/leafvdo.mp4";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -26,28 +27,53 @@ export default function Home() {
         <div className="relative z-10 h-full flex flex-col text-white px-6 md:px-16">
 
           {/* Navbar */}
-          <nav className="flex items-center justify-between py-6">
-            <div className="text-3xl font-bold tracking-wide">
-              growth
-            </div>
+<nav className="flex items-center justify-between py-6">
+  <div className="text-3xl font-bold tracking-wide">
+    <Link to="/" className="hover:text-green-400 transition">
+      growth
+    </Link>
+  </div>
 
-            <div className="hidden md:flex items-center gap-6">
-              <ul className="flex gap-8 bg-white/10 backdrop-blur-lg px-8 py-3 rounded-full border border-white/20">
-                <li className="hover:text-green-400 transition cursor-pointer">Home</li>
-                <li className="hover:text-green-400 transition cursor-pointer">Contact</li>
-                <li className="hover:text-green-400 transition cursor-pointer">Blog</li>
-                <li className="hover:text-green-400 transition cursor-pointer">Shop</li>
-              </ul>
+  <div className="hidden md:flex items-center gap-6">
+    <ul className="flex gap-8 bg-white/10 backdrop-blur-lg px-8 py-3 rounded-full border border-white/20">
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-2 rounded-full border border-white hover:bg-white hover:text-black transition"
-              >
-                Login
-              </motion.button>
-            </div>
-          </nav>
+      <li>
+        <Link
+          to="/"
+          className="hover:text-green-400 transition cursor-pointer"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          to="/contact"
+          className="hover:text-green-400 transition cursor-pointer"
+        >
+          Contact
+        </Link>
+      </li>
+
+      <li className="hover:text-green-400 transition cursor-pointer">
+        Blog
+      </li>
+
+      <li className="hover:text-green-400 transition cursor-pointer">
+        Shop
+      </li>
+
+    </ul>
+
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="px-6 py-2 rounded-full border border-white hover:bg-white hover:text-black transition"
+    >
+      Login
+    </motion.button>
+  </div>
+</nav>
 
           {/* Hero Center Content */}
           <div className="flex-1 flex flex-col items-center justify-center text-center">
@@ -427,45 +453,54 @@ export default function Home() {
   />
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-emerald-950/80 flex flex-col items-center justify-center text-center px-6 pt-24">
+  <div className="absolute inset-0 bg-emerald-950/80 flex flex-col items-center justify-start text-center px-6 pt-36">
 
     {/* Heading */}
-    <h2 className="text-4xl md:text-9xl font-bold text-white">
+    <h2 className="text-4xl md:text-9xl font-bold text-white leading-tight">
       Join the community!
     </h2>
 
     {/* White Pill Box */}
-    <div className="mt-8 bg-white rounded-2xl px-6 py-4 flex flex-wrap items-center justify-center gap-3 shadow-2xl">
+    <div className="mt-20 bg-white rounded-2xl px-6 py-4 flex flex-wrap items-center justify-center gap-3 shadow-2xl">
 
-      <button className="px-4 py-2 text-xs rounded-full bg-gray-100 text-black">
+      <button className="px-4 py-2 text-xs rounded-full bg-gray-100 text-black hover:bg-gray-200 transition">
         Instagram
       </button>
 
-      <button className="px-4 py-2 text-xs rounded-full bg-gray-100 text-black">
+      <button className="px-4 py-2 text-xs rounded-full bg-gray-100 text-black hover:bg-gray-200 transition">
         Twitter
       </button>
 
-      <button className="px-4 py-2 text-xs rounded-full bg-gray-100 text-black">
+      <button className="px-4 py-2 text-xs rounded-full bg-gray-100 text-black hover:bg-gray-200 transition">
         YouTube
       </button>
 
-      <button className="px-6 py-2 text-xs rounded-full bg-black text-white">
+      <button className="px-6 py-2 text-xs rounded-full bg-black text-white hover:opacity-80 transition">
         Subscribe
       </button>
 
-      <button className="px-4 py-2 text-xs rounded-full bg-gray-100 text-black">
+      <button className="px-4 py-2 text-xs rounded-full bg-gray-100 text-black hover:bg-gray-200 transition">
         Pinterest
       </button>
 
     </div>
 
     {/* Bottom Text */}
-    <p className="text-sm text-gray-300 mt-6">
+    <p className="text-sm text-gray-300 mt-8">
       10,000+ Plant Lovers
     </p>
 
   </div>
 </section>
+
+
+
+{/* Footer */}
+<footer className="w-full text-center py-6 border-t border-white/10 bg-black/30 backdrop-blur-md">
+  <p className="text-black-300 text-sm">
+    © {new Date().getFullYear()} Plantify. All rights reserved.
+  </p>
+</footer>
 
     </div>
   );
