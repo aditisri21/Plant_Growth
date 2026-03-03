@@ -55,9 +55,14 @@ export default function Home() {
         </Link>
       </li>
 
-      <li className="hover:text-green-400 transition cursor-pointer">
-        Blog
-      </li>
+      <li>
+  <Link
+    to="/blog"
+    className="hover:text-green-400 transition cursor-pointer"
+  >
+    Blog
+  </Link>
+</li>
 
       <li className="hover:text-green-400 transition cursor-pointer">
         Shop

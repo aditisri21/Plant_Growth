@@ -6,6 +6,50 @@ function ContactPage() {
 
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+       {/* ================= NAVBAR ================= */}
+        <nav className="flex items-center justify-between py-6">
+          <div className="text-3xl font-bold tracking-wide">
+            <a href="/" className="hover:text-green-400 transition">
+              growth
+            </a>
+          </div>
+
+          <div className="hidden md:flex items-center gap-6">
+            <ul className="flex gap-8 bg-white/60 backdrop-blur-lg px-8 py-3 rounded-full border border-gray-200 shadow-sm">
+
+              <li>
+                <a href="/" className="hover:text-green-500 transition cursor-pointer">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="/contact" className="hover:text-green-500 transition cursor-pointer">
+                  Contact
+                </a>
+              </li>
+
+              <li>
+                <a href="/blog" className="text-green-600 font-medium cursor-pointer">
+                  Blog
+                </a>
+              </li>
+
+              <li className="hover:text-green-500 transition cursor-pointer">
+                Shop
+              </li>
+
+            </ul>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition"
+            >
+              Login
+            </motion.button>
+          </div>
+        </nav>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center px-6 py-20">
