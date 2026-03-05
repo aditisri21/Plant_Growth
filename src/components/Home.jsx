@@ -64,10 +64,14 @@ export default function Home() {
   </Link>
 </li>
 
-      <li className="hover:text-green-400 transition cursor-pointer">
-        Shop
-      </li>
-
+      <li>
+  <Link
+    to="/shop"
+    className="hover:text-green-400 transition cursor-pointer"
+  >
+    Shop
+  </Link>
+</li>
     </ul>
 
     <motion.button
