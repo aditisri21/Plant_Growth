@@ -4,11 +4,13 @@ import Home from "./components/Home";
 import ContactPage from "./components/ContactPage";
 import Blog from "./components/Blog"
 import Shop from "./components/Shop";
+// import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* <Route path="/" element={<Navbar />} /> */}
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<Blog />} />

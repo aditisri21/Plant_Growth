@@ -3,6 +3,7 @@ import bgImage from "../assets/growth.jpg";
 import { useRef } from "react";
 import leafVideo from "../assets/leafvdo.mp4";
 import { Link } from "react-router-dom";
+// import Navbar from "./Navbar";
 
 
 export default function Home() {
@@ -85,7 +86,7 @@ export default function Home() {
 </nav>
 
           {/* Hero Center Content */}
-          <div className="flex-1 flex flex-col items-center justify-center text-center">
+          <div className="flex-1 flex flex-col items-center justify-center text-center pt-25">
 
             <motion.p
               initial={{ opacity: 0, y: -20 }}
@@ -96,14 +97,14 @@ export default function Home() {
               Petal power
             </motion.p>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-[60px] md:text-[140px] font-extrabold leading-none"
-            >
+           <motion.h1
+               initial={{ opacity: 0, y: 40 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.8 }}
+               className="text-[80px] md:text-[170px] font-extrabold leading-[0.9] mb-6 -mt-7"
+             >
               growth
-            </motion.h1>
+           </motion.h1>
 
             <motion.p
               initial={{ opacity: 0 }}
