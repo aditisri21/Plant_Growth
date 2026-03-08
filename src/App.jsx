@@ -1,21 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./components/Home";
-import ContactPage from "./components/ContactPage";
-import Blog from "./components/Blog"
-import Shop from "./components/Shop";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
+import Home from "./components/home/Home";
+import ContactPage from "./components/contact/ContactPage";
+import Blog from "./components/blog/Blog";
+import Shop from "./components/shop/Shop";
 
 function App() {
   return (
     <BrowserRouter>
+
+      <Navbar />
+
       <Routes>
-        {/* <Route path="/" element={<Navbar />} /> */}
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
+
     </BrowserRouter>
   );
 }

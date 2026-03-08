@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import bgImage from "../assets/growth.jpg";
+import bgImage from "../../assets/growth.jpg";
 import { useRef } from "react";
-import leafVideo from "../assets/leafvdo.mp4";
+import leafVideo from "../../assets/leafvdo.mp4";
 import { Link } from "react-router-dom";
 // import Navbar from "./Navbar";
 
